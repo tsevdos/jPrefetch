@@ -1,0 +1,32 @@
+{
+  "name": "jPrefetch",
+  "version": "0.0.1",
+  "description": "jQuery prefetch plugin.",
+  "maintainers": [
+    {
+      "name": "John Tsevdos",
+      "email": "tsevdosjohn@gmail.com",
+      "web": "http://phrappe.com"
+    }
+  ],
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-jshint": "~0.3.0",
+    "grunt-contrib-uglify": "~0.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:tsevdos/jPrefetch.git"
+  },
+  "keywords": [
+    "jquery",
+    "prefetch",
+    "plugin"
+  ],
+  "licenses": [
+    {
+      "name": "MIT",
+      "url": "http://www.opensource.org/licenses/mit-license.php"
+    }
+  ]
+}
