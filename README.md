@@ -6,6 +6,7 @@ A jquery plugin for easier implementing the HTML5 prefetch attribute.
 ## Browser Support ##
 
 
+
 ## FAQ ##
 
 MDN has an excellent article on this topic, with valuable resources, and many answers on questions like : 
