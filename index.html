@@ -7,22 +7,22 @@
     <meta name="description" content="jPrefetch plugin.">
     <meta name="viewport" content="width=device-width">
 
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
     <h1>jPrefetch</h1>
 
-<script src="specs/vendor/jquery/jquery.js"></script>
-<script src="ja/jquery.jprefetch.js"></script>
+    <ul>
+        <li><a href="http://phrappe.com" data-prefetch="true">Phrappe.com</a></li>
+        <li><img src="http://phrappe.com/wp-content/themes/ambrosia/images/decoration.png" alt="flower" data-prefetch="true" /></li>
+    </ul>
+
+<script src="js/vendor/jquery-1.9.1.js"></script>
+<script src="js/jquery.jprefetch.js"></script>
 <script>
 $(document).ready(function(){
 
-	$('#elem').defaultPluginName({
-	  propertyName: 'a custom value'
-	});
+	$('a, img').jPrefetch();
 
 });
 </script>

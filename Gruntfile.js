@@ -12,13 +12,13 @@ module.exports = function(grunt) {
     uglify: {
       options: {
         // the banner is inserted at the top of the output
-        banner: '/* \n' +
-                '<%= pkg.name %> - <%= pkg.version %> (latest commit <%= grunt.template.today("dd-mm-yyyy") %>)\n' +
+        banner: '/*\n' +
+                '<%= pkg.name %> - <%= pkg.version %> (latest commit @ <%= grunt.template.today("dd-mm-yyyy") %>)\n' +
                 'Description: <%= pkg.description %>\n' +
-                '<%= pkg.repository.type %> repository - <%= pkg.repository.url %>\n' +
                 'Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.maintainers.name %> (<%= pkg.maintainers.web %>)\n' +
                 'licensed under the <%= pkg.licenses.name %> license (<%= pkg.licenses.url %>).\n' +
-                '<%= pkg.name %> <%= pkg.version %> - <%= grunt.template.today("dd-mm-yyyy") %> */\n'
+                '<%= pkg.repository.type %> repository - <%= pkg.repository.url %>\n' +
+                '*/\n'
       },
       my_target: {
         files: {

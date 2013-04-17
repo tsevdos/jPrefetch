@@ -40,11 +40,51 @@
             // and this.options
             // you can add more functions like the one below and
             // call them like so: this.yourOtherFunction(this.element, this.options).
+
+            this.findElements( this.element );
+
         },
 
-        yourOtherFunction: function(el, options) {
-            // some logic
+        findElements: function(el){
+            var $el     = $(el),
+                tagName = $el.prop('tagName').toLowerCase(),
+                prefetchURL;
+
+            // test if element has data-prefetch attribute
+            if ( $el.data('prefetch') === true ){
+
+                if ( tagName === 'a' ) {
+                    //It's a link
+                    prefetchURL = $el.attr('href');
+                } else if ( tagName === 'img'){
+                    //It's an image
+                    prefetchURL = $el.attr('src');
+                }
+
+                this.addPrefetchTags(prefetchURL);
+
+            }
+
+        },
+
+        addPrefetchTags: function(url) {
+            
+            // For Firefox - create a link element with a prefect attribute (W3C standard)
+            $("<link />", {
+                // with rel=prefetch
+                rel: "prefetch",
+                href: url
+            }).appendTo("head");
+
+            // For Chrome -create a link element with a prerender attribute (non-standard, Chrome only). More info at http://phrappe.com/markup/html5-prefetching/
+            $("<link />", {
+                // with rel=prefetch
+                rel: "prerender",
+                href: url
+            }).appendTo("head");
+
         }
+
     };
 
     // A really lightweight plugin wrapper around the constructor,
