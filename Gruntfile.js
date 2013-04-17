@@ -6,13 +6,19 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
 
     jshint: {
-      all: [ 'Gruntfile.js', 'js/**/*.js', 'specs/**/*.js' , 'tests/**/*.js' ]
+      all: [ 'Gruntfile.js', 'js/jquery.jprefetch.js' ]
     },
 
     uglify: {
       options: {
         // the banner is inserted at the top of the output
-        banner: '/*! <%= pkg.name %> <%= pkg.version %> - <%= grunt.template.today("dd-mm-yyyy") %> */\n'
+        banner: '/* \n' +
+                '<%= pkg.name %> - <%= pkg.version %> (latest commit <%= grunt.template.today("dd-mm-yyyy") %>)\n' +
+                'Description: <%= pkg.description %>\n' +
+                '<%= pkg.repository.type %> repository - <%= pkg.repository.url %>\n' +
+                'Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.maintainers.name %> (<%= pkg.maintainers.web %>)\n' +
+                'licensed under the <%= pkg.licenses.name %> license (<%= pkg.licenses.url %>).\n' +
+                '<%= pkg.name %> <%= pkg.version %> - <%= grunt.template.today("dd-mm-yyyy") %> */\n'
       },
       my_target: {
         files: {

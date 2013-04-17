@@ -13,9 +13,7 @@
 
     // Create the defaults once
     var pluginName = "jPrefetch",
-        defaults = {
-            propertyName: "value"
-        };
+        defaults = {};
 
     // The actual plugin constructor
     function Plugin( element, options ) {
