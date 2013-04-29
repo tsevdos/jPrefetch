@@ -1,6 +1,22 @@
 # jprefetch #
 
-A jquery plugin for easier and more dynamic implementation implementing of the new HTML5 prefetch attribute. For more details regarding the HTML5 prefetch I strongly recommend to read my article [HTML5 prefetching](http://phrappe.com/markup/html5-prefetching/)
+A jquery plugin for easier and more dynamic implementation of the new HTML5 prefetch attribute. For more details regarding the HTML5 prefetch I strongly recommend to read my article [HTML5 prefetching](http://phrappe.com/markup/html5-prefetching/)
+
+## How to use it ##
+Just include the plugin `<script src="js/jquery.jprefetch.js"></script>` and activate it in the document ready.
+
+`$(document).ready(function(){
+
+	$.jPrefetch('http://phrappe.com');
+
+});`
+
+The above code will create all the necessary code to prefetch the `http://phrappe.com` url from the supported browsers (see Browser Support section). To make the above process even more dynamic you can put the `data-prefetch="true"` attribute on any link tag for example `<a href="http://phrappe.com" data-prefetch="true">Phrappe.com</a>` and then activate the plugin **without** any parameters.
+
+`$.jPrefetch();`
+
+Keep in mind that the plugin will prefetch **only** the first link element that will find. This is because the overuse of prefetching can cause delays in bandwidth and it's a bad practise to have multiple pages prefetched.
+
 
 ## Prefetching Notes ##
 
