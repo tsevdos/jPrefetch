@@ -5,11 +5,7 @@ A jquery plugin for easier and more dynamic implementation of the new HTML5 pref
 ## How to use it ##
 Just include the plugin `<script src="js/jquery.jprefetch.js"></script>` and activate it in the document ready.
 
-`$(document).ready(function(){
-
-	$.jPrefetch('http://phrappe.com');
-
-});`
+`$.jPrefetch('http://phrappe.com');`
 
 The above code will create all the necessary code to prefetch the `http://phrappe.com` url from the supported browsers (see Browser Support section). To make the above process even more dynamic you can put the `data-prefetch="true"` attribute on any link tag for example `<a href="http://phrappe.com" data-prefetch="true">Phrappe.com</a>` and then activate the plugin **without** any parameters.
 
