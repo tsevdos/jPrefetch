@@ -32,6 +32,6 @@ This jQuery plugin was inspired by these articles:
 - [Mastering HTML5 Prefetching](http://www.catswhocode.com/blog/mastering-html5-prefetching)
 - [Link Prefetching with HTML 5 and jQuery](http://gavinmorrice.com/blog/posts/tagged/optimization)
 
-## MIT License (MIT) ##
+## License ##
 
-Copyright (C) 2013 John Tsevdos
+MIT
